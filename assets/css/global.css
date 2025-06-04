@@ -1,0 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+/* Header Styles */
+.nav-link {
+    color: rgba(0, 0, 0, 0.9);
+    position: relative;
+    padding: 0.75rem 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 0.5rem;
+}
+
+.nav-link:hover {
+    color: #4CAF50;
+    background: rgba(0, 0, 0, 0.041);
+    transform: translateY(-1px);
+}
+.nav-link-active {
+    color: #4CAF50;
+    background: rgba(0, 0, 0, 0.041);
+    transform: translateY(-1px);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #4CAF50, #8BC34A);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.nav-link:hover::after {
+    width: 70%;
+}
+
+/* CTA Button Styles */
+.cta-button {
+    background: linear-gradient(135deg, #4CAF50, #8BC34A);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(76, 175, 80, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.cta-button:hover {
+    box-shadow: 0 6px 12px -2px rgba(76, 175, 80, 0.4);
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+/* Mobile Menu Styles */
+.mobile-menu-button {
+    position: relative;
+    z-index: 50;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-button:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.hamburger-line {
+    width: 24px;
+    height: 2px;
+    background-color: black;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.mobile-menu {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu.translate-x-0 {
+    transform: translateX(0);
+}
+
+.mobile-menu-overlay {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.mobile-menu-overlay.opacity-50 {
+    opacity: 0.5;
+}
+
+.mobile-nav-link {
+    display: block;
+    padding: 0.75rem;
+    color: #1A2E47;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 0.5rem;
+    margin: 0 0.5rem;
+    font-size: 14px;
+}
+
+.mobile-nav-link:hover {
+    color: #4CAF50;
+    background: rgba(76, 175, 80, 0.1);
+    transform: translateX(4px);
+}
+
+.mobile-nav-link-active {
+    color: #4CAF50;
+    background: rgba(76, 175, 80, 0.1);
+    transform: translateX(4px);
+}
+
+/* Header Scroll Effect */
+.header-scrolled {
+    background: linear-gradient(90deg, rgba(26, 46, 71, 0.95), rgba(10, 20, 30, 0.95));
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Top Bar Styles */
+.top-bar-link {
+    color: black;
+    position: relative;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.top-bar-link:hover {
+    color: #4CAF50;
+}
+
+.top-bar-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #4CAF50;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.top-bar-link:hover::after {
+    transform: translateX(0);
+}
+
+/* Logo Animation */
+@keyframes logoSpin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.logo-icon:hover {
+    animation: logoSpin 1s ease-in-out;
+}
