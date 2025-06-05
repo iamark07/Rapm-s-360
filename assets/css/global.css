@@ -152,7 +152,6 @@
 .mobile-nav-link-active {
     color: #4CAF50;
     background: rgba(76, 175, 80, 0.1);
-    transform: translateX(4px);
 }
 
 /* Header Scroll Effect
