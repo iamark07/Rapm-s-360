@@ -44,42 +44,47 @@ document.querySelectorAll('.mobile-nav-link').forEach(link => {
     });
 });
 
-// Header Scroll Effect
-const header = document.getElementById('mainHeader');
-let lastScroll = 0;
+// // Header Scroll Effect
+// const header = document.getElementById('mainHeader');
+// let lastScroll = 0;
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
+// window.addEventListener('scroll', () => {
+//     const currentScroll = window.pageYOffset;
 
-    // Add/remove header-scrolled class based on scroll position
-    if (currentScroll > 50) {
-        header.classList.add('header-scrolled');
-    } else {
-        header.classList.remove('header-scrolled');
-    }
+//     // Add/remove header-scrolled class based on scroll position
+//     // if (currentScroll > 50) {
+//     //     header.classList.add('header-scrolled');
+//     // } else {
+//     //     header.classList.remove('header-scrolled');
+//     // }
 
-    // Hide/show header based on scroll direction
-    if (currentScroll > lastScroll && currentScroll > 100) {
-        header.style.transform = 'translateY(-100%)';
-    } else {
-        header.style.transform = 'translateY(0)';
-    }
+//     // Hide/show header based on scroll direction
+//     if (currentScroll > lastScroll && currentScroll > 100) {
+//         header.style.transform = 'translateY(-100%)';
+//         header.style.transform = 'translateY(-0%)';
+//     } else {
+//         header.style.transform = 'translateY(0)';
+//     }
 
-    lastScroll = currentScroll;
-});
+//     lastScroll = currentScroll;
+// });
 
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        
-        if (target) {
-            // Smooth scroll to target
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+        const href = this.getAttribute('href');
+        // Only prevent default and scroll if href is not just "#"
+        if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            
+            if (target) {
+                // Smooth scroll to target
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         }
     });
 });
@@ -101,4 +106,32 @@ const observer = new IntersectionObserver((entries) => {
 // Observe all navigation links for animation
 document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
     observer.observe(link);
+});
+
+
+
+// FAQ Accordion
+document.addEventListener('DOMContentLoaded', function() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            // Toggle active class on question
+            question.classList.toggle('active');
+            
+            // Get the answer element
+            const answer = question.nextElementSibling;
+            
+            // Toggle show class on answer
+            answer.classList.toggle('show');
+            
+            // Close other answers
+            faqQuestions.forEach(otherQuestion => {
+                if (otherQuestion !== question) {
+                    otherQuestion.classList.remove('active');
+                    otherQuestion.nextElementSibling.classList.remove('show');
+                }
+            });
+        });
+    });
 });
