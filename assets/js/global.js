@@ -1,3 +1,6 @@
+// Initialize Lucide icons
+lucide.createIcons();
+
 // Mobile Menu Toggle
 const mobileMenuButton = document.querySelector('.mobile-menu-button');
 const mobileMenu = document.querySelector('.mobile-menu');

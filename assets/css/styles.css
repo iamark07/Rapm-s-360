@@ -361,50 +361,7 @@
   position: relative;
 }
 
-/* CTA Button Styles */
-.cta-button-primary {
-  background: #ffffff;
-  color: #4caf50 !important;
-  border: 2px solid #ffffff;
-  font-weight: 600;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transform: translateY(0);
-  transition: all 0.3s ease;
-}
 
-.cta-button-primary:hover {
-  background: transparent;
-  color: #ffffff !important;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.cta-button-secondary {
-  background: transparent;
-  color: #ffffff !important;
-  border: 2px solid #ffffff;
-  font-weight: 600;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transform: translateY(0);
-  transition: all 0.3s ease;
-}
-
-.cta-button-secondary:hover {
-  background: #ffffff;
-  color: #4caf50 !important;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Responsive Button Styles */
-@media (max-width: 640px) {
-  .cta-button-primary,
-  .cta-button-secondary {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-  }
-}
 
 /* How it Works Section Styles */
 #how-it-works {
@@ -1082,24 +1039,6 @@
   margin-top: 3rem;
 }
 
-.franchise-button {
-  background: linear-gradient(135deg, #4caf50, #8bc34a);
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 0.75rem;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: none;
-  cursor: pointer;
-}
-
-.franchise-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
-}
 
 @media (max-width: 780px) {
   .benefit-description {
@@ -1215,7 +1154,6 @@
 
 .tab-button:hover {
   border-color: #4caf50;
-  transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(76, 175, 80, 0.1);
 }
 
@@ -1476,7 +1414,6 @@
 }
 
 .model-cta:hover {
-  transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
 }
 
@@ -1709,17 +1646,21 @@
 }
 
 .faq-item:hover {
-  transform: translateY(-2px);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .faq-question {
   position: relative;
-  transition: all 0.3s ease;
+}
+
+.faq-question.active{
+  background: linear-gradient(135deg, #4CAF50, #8BC34A);
+  color: white;
 }
 
 .faq-question.active i {
   transform: rotate(45deg);
+  color: white;
 }
 
 .faq-answer {
