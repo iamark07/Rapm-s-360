@@ -15,9 +15,11 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Add these in the head section after other CSS links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
-<body class="bg-gray-50">
+<body class="bg-gray-50 overflow-x-hidden">
     <!-- Header Section -->
     <header class="static top-0 w-full bg-white shadow-lg transition-all duration-300 z-50" id="mainHeader">
         <div class="container mx-auto px-5">
@@ -316,7 +318,7 @@
     <section class="py-24 relative">
         <!-- Background Elements -->
         <div class="absolute inset-0 bg-gradient-to-br from-[#f0fdf4] via-white to-[#f8fafc]"></div>
-        <div class="container mx-auto px-5 md:px-10 relative z-10">
+        <div class="container mx-auto px-5 relative z-10">
             <!-- Section Header -->
             <div class="franchise-benefit-header section-header">
                 <span class="franchise-benefit-subtitle section-subtitle">Why Choose Us</span>
@@ -326,22 +328,18 @@
 
             <!-- Main Content -->
             <div class="relative">
-                <!-- Decorative Elements -->
-                <div class="absolute -top-20 -left-20 w-40 h-40 bg-[#4CAF50]/5 rounded-full blur-3xl"></div>
-                <div class="absolute -bottom-20 -right-20 w-40 h-40 bg-[#8BC34A]/5 rounded-full blur-3xl"></div>
-
                 <!-- Benefits Grid -->
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
                     <!-- Left Column: Main Benefits -->
                     <div class="lg:col-span-7 space-y-8">
                         <!-- Benefit 1 -->
                         <div class="group relative bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300">
-                            <div class="flex items-start gap-6">
+                            <div class="flex flex-col items-center md:flex-row md:items-start gap-6">
                                 <div class="flex-shrink-0 w-16 h-16 rounded-xl bg-[#4CAF50]/10 flex items-center justify-center text-[#4CAF50] transform group-hover:scale-110 transition-all duration-300">
                                     <i class="ri-rocket-2-line text-3xl"></i>
                                 </div>
                                 <div class="flex-1">
-                                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Rapid Business Launch</h3>
+                                    <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3">Rapid Business Launch</h3>
                                     <p class="text-gray-600 leading-relaxed mb-4">From site selection to grand opening, we handle everything. Our turnkey system gets you operational in record time.</p>
                                     <div class="flex flex-wrap gap-4">
                                         <div class="flex items-center gap-2 text-[#4CAF50] bg-[#4CAF50]/5 px-4 py-2 rounded-full">
@@ -359,12 +357,12 @@
 
                         <!-- Benefit 2 -->
                         <div class="group relative bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300">
-                            <div class="flex items-start gap-6">
+                            <div class="flex flex-col items-center md:flex-row md:items-start gap-6">
                                 <div class="flex-shrink-0 w-16 h-16 rounded-xl bg-[#4CAF50]/10 flex items-center justify-center text-[#4CAF50] transform group-hover:scale-110 transition-all duration-300">
                                     <i class="ri-line-chart-line text-3xl"></i>
                                 </div>
                                 <div class="flex-1">
-                                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Proven Growth System</h3>
+                                    <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3">Proven Growth System</h3>
                                     <p class="text-gray-600 leading-relaxed mb-4">Access our battle-tested strategies and operational excellence that have helped numerous franchises succeed.</p>
                                     <div class="flex flex-wrap gap-4">
                                         <div class="flex items-center gap-2 text-[#4CAF50] bg-[#4CAF50]/5 px-4 py-2 rounded-full">
@@ -382,12 +380,12 @@
 
                         <!-- Benefit 3 -->
                         <div class="group relative bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300">
-                            <div class="flex items-start gap-6">
+                            <div class="flex flex-col items-center md:flex-row md:items-start gap-6">
                                 <div class="flex-shrink-0 w-16 h-16 rounded-xl bg-[#4CAF50]/10 flex items-center justify-center text-[#4CAF50] transform group-hover:scale-110 transition-all duration-300">
                                     <i class="ri-shield-check-line text-3xl"></i>
                                 </div>
                                 <div class="flex-1">
-                                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Complete Support Network</h3>
+                                    <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3">Complete Support Network</h3>
                                     <p class="text-gray-600 leading-relaxed mb-4">24/7 assistance, comprehensive training, and ongoing support to ensure your business thrives.</p>
                                     <div class="flex flex-wrap gap-4">
                                         <div class="flex items-center gap-2 text-[#4CAF50] bg-[#4CAF50]/5 px-4 py-2 rounded-full">
@@ -409,7 +407,7 @@
                         <div class="sticky top-24">
                             <!-- Stats Panel -->
                             <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 mb-8">
-                                <div class="grid grid-cols-2 gap-6 mb-8">
+                                <div class="grid sm:grid-cols-2 gap-6 mb-8">
                                     <div class="relative p-6 rounded-xl bg-gradient-to-br from-[#4CAF50]/5 to-[#8BC34A]/5">
                                         <div class="absolute -top-4 -right-4 w-16 h-16 bg-[#4CAF50]/10 rounded-full flex items-center justify-center">
                                             <i class="ri-trophy-line text-2xl text-[#4CAF50]"></i>
@@ -428,7 +426,7 @@
 
                                 <!-- Feature List -->
                                 <div class="space-y-4">
-                                    <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-[#4CAF50]/5 transition-colors duration-300">
+                                    <div class="flex items-start gap-4 py-4 rounded-xl hover:bg-[#4CAF50]/5 transition-colors duration-300">
                                         <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-[#4CAF50]/10 flex items-center justify-center">
                                             <i class="ri-map-pin-line text-[#4CAF50]"></i>
                                         </div>
@@ -437,7 +435,7 @@
                                             <p class="text-gray-600 text-sm">Protected market area with growth potential</p>
                                         </div>
                                     </div>
-                                    <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-[#4CAF50]/5 transition-colors duration-300">
+                                    <div class="flex items-start gap-4 py-4 rounded-xl hover:bg-[#4CAF50]/5 transition-colors duration-300">
                                         <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-[#4CAF50]/10 flex items-center justify-center">
                                             <i class="ri-megaphone-line text-[#4CAF50]"></i>
                                         </div>
@@ -446,7 +444,7 @@
                                             <p class="text-gray-600 text-sm">Proven strategies and brand materials</p>
                                         </div>
                                     </div>
-                                    <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-[#4CAF50]/5 transition-colors duration-300">
+                                    <div class="flex items-start gap-4 py-4 rounded-xl hover:bg-[#4CAF50]/5 transition-colors duration-300">
                                         <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-[#4CAF50]/10 flex items-center justify-center">
                                             <i class="ri-computer-line text-[#4CAF50]"></i>
                                         </div>
@@ -541,7 +539,7 @@
     
     <!-- Franchise Models Section -->
     <section class="models-section">
-        <div class="models-container">
+        <div class="models-container container mx-auto px-5">
             <div class="models-header section-header">
                 <span class="models-subtitle section-subtitle">Investment Plans</span>
                 <h2 class="section-title models-title">Franchise Models We Offer</h2>
@@ -1046,7 +1044,7 @@
 
     <!-- Call to Action Section -->
     <section id="cta" class="py-16 lg:py-16 text-white text-center">
-        <div class="container mx-auto px-5 md:px-10">
+        <div class="container mx-auto px-5">
             <h2 class="section-title">Ready to Experience Hassle-Free Laundry?</h2>
             <p class="section-description">Schedule a pickup today and let us take care of all your laundry and dry
                 cleaning needs with professionalism and speed.</p>
@@ -1071,7 +1069,7 @@
 
     <!-- Services Section -->
     <section id="services" class="hidden py-16 lg:py-24 bg-white">
-        <div class="container mx-auto px-5 md:px-10">
+        <div class="container mx-auto px-5">
             <div class="text-center mb-12 section-header">
                 <h2 class="section-title">Our Professional Services</h2>
                 <p class="section-description text-gray-600 max-w-2xl mx-auto">We offer a comprehensive range of laundry
@@ -1152,14 +1150,14 @@
 
     <!-- How it Works Section -->
     <section id="how-it-works" class="py-16 lg:py-24 bg-gray-50">
-        <div class="container mx-auto px-5 md:px-10">
+        <div class="container mx-auto px-5">
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-bold text-gray-800 mb-4">How It Works</h2>
                 <p class="text-lg text-gray-600 max-w-2xl mx-auto">Getting your laundry done is easy with our simple and
                     efficient process.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Step 1 -->
                 <div class="how-it-works-item text-center p-6 rounded-lg">
                     <div
@@ -1197,72 +1195,117 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-16 lg:py-24 bg-white">
-        <div class="container mx-auto px-5 md:px-10">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">What Our Customers Say</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Read what our happy customers have to say about our
-                    services.</p>
+    <section id="testimonials" class="pt-16 pb-32 lg:py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        <!-- Decorative Elements -->
+        <div class="absolute -top-20 -left-20 w-40 h-40 bg-[#4CAF50]/5 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-20 -right-20 w-40 h-40 bg-[#8BC34A]/5 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-5 relative z-10">
+            <div class="text-center mb-12 section-header">
+                <span class="section-subtitle">Testimonials</span>
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="section-description">Read what our happy customers have to say about our services.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Testimonial Item 1 -->
-                <div class="testimonial-item bg-gray-100 p-6 rounded-lg shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <img src="assets/img/testimonials/customer1.jpg" alt="Customer 1"
-                            class="w-12 h-12 rounded-full mr-4 object-cover">
-                        <div>
-                            <p class="font-semibold text-gray-800">Sarah J.</p>
-                            <p class="text-sm text-gray-600">Regular Customer</p>
+            <!-- Swiper -->
+            <div class="testimonials-slider relative">
+                <div class="swiper testimonialsSwiper">
+                    <div class="swiper-wrapper h-full pb-10">
+                        <!-- Testimonial Item 1 -->
+                        <div class="swiper-slide h-full">
+                            <div class="testimonial-item bg-white p-8 rounded-2xl shadow-lg transition-all duration-300">
+                                <div class="flex items-center mb-6">
+                                    <div class="relative">
+                                        <img src="assets/img/testimonials-img/testimonial-img-1.jpg" alt="Customer 1" class="w-16 h-16 rounded-full object-cover border-4 border-[#4CAF50]/10">
+                                        <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-[#4CAF50] rounded-full flex items-center justify-center">
+                                            <i class="ri-double-quotes-l text-white text-sm"></i>
+                                        </div>
+                                    </div>
+                                    <div class="ml-4">
+                                        <p class="font-semibold text-gray-800 text-lg">Sarah J.</p>
+                                        <p class="text-sm text-[#4CAF50]">Regular Customer</p>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="flex text-[#4CAF50] mb-2">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 leading-relaxed text-sm md:text-base">"RAPM'S 360 has completely changed my life! I used to dread laundry day, but now it's so convenient with their pickup and delivery service. The clothes always come back fresh and perfectly cleaned."</p>
+                            </div>
                         </div>
-                    </div>
-                    <p class="text-gray-700 leading-relaxed">"RAPM'S 360 has completely changed my life! I used to dread
-                        laundry day, but now it's so convenient with their pickup and delivery service. The clothes
-                        always come back fresh and perfectly cleaned."</p>
-                </div>
 
-                <!-- Testimonial Item 2 -->
-                <div class="testimonial-item bg-gray-100 p-6 rounded-lg shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <img src="assets/img/testimonials/customer2.jpg" alt="Customer 2"
-                            class="w-12 h-12 rounded-full mr-4 object-cover">
-                        <div>
-                            <p class="font-semibold text-gray-800">Mark T.</p>
-                            <p class="text-sm text-gray-600">Busy Professional</p>
+                        <!-- Testimonial Item 2 -->
+                        <div class="swiper-slide h-full">
+                            <div class="testimonial-item bg-white p-8 rounded-2xl shadow-lg transition-all duration-300">
+                                <div class="flex items-center mb-6">
+                                    <div class="relative">
+                                        <img src="assets/img/testimonials-img/testimonial-img-2.jpg" alt="Customer 2" class="w-16 h-16 rounded-full object-cover border-4 border-[#4CAF50]/10">
+                                        <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-[#4CAF50] rounded-full flex items-center justify-center">
+                                            <i class="ri-double-quotes-l text-white text-sm"></i>
+                                        </div>
+                                    </div>
+                                    <div class="ml-4">
+                                        <p class="font-semibold text-gray-800 text-lg">Mark T.</p>
+                                        <p class="text-sm text-[#4CAF50]">Busy Professional</p>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="flex text-[#4CAF50] mb-2">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 leading-relaxed text-sm md:text-base">"As a busy professional, I don't have time for laundry. RAPM'S 360's express service is a lifesaver! Quick, efficient, and always high quality. Highly recommended!"</p>
+                            </div>
                         </div>
-                    </div>
-                    <p class="text-gray-700 leading-relaxed">"As a busy professional, I don't have time for laundry.
-                        RAPM'S 360's express service is a lifesaver! Quick, efficient, and always high quality. Highly
-                        recommended!"</p>
-                </div>
 
-                <!-- Testimonial Item 3 -->
-                <div class="testimonial-item bg-gray-100 p-6 rounded-lg shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <img src="assets/img/testimonials/customer3.jpg" alt="Customer 3"
-                            class="w-12 h-12 rounded-full mr-4 object-cover">
-                        <div>
-                            <p class="font-semibold text-gray-800">Emily R.</p>
-                            <p class="text-sm text-gray-600">Student</p>
+                        <!-- Testimonial Item 3 -->
+                        <div class="swiper-slide h-full">
+                            <div class="testimonial-item bg-white p-8 rounded-2xl shadow-lg transition-all duration-300">
+                                <div class="flex items-center mb-6">
+                                    <div class="relative">
+                                        <img src="assets/img/testimonials-img/testimonial-img-3.jpg" alt="Customer 3" class="w-16 h-16 rounded-full object-cover border-4 border-[#4CAF50]/10">
+                                        <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-[#4CAF50] rounded-full flex items-center justify-center">
+                                            <i class="ri-double-quotes-l text-white text-sm"></i>
+                                        </div>
+                                    </div>
+                                    <div class="ml-4">
+                                        <p class="font-semibold text-gray-800 text-lg">Emily R.</p>
+                                        <p class="text-sm text-[#4CAF50]">Student</p>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="flex text-[#4CAF50] mb-2">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 leading-relaxed text-sm md:text-base">"Affordable and reliable. The pickup and delivery is so convenient for me as a student. My clothes feel and smell amazing every time!"</p>
+                            </div>
                         </div>
                     </div>
-                    <p class="text-gray-700 leading-relaxed">"Affordable and reliable. The pickup and delivery is so
-                        convenient for me as a student. My clothes feel and smell amazing every time!"</p>
                 </div>
-
-                <!-- Testimonial Item 4 -->
-                <div class="testimonial-item bg-gray-100 p-6 rounded-lg shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <img src="assets/img/testimonials/customer4.jpg" alt="Customer 4"
-                            class="w-12 h-12 rounded-full mr-4 object-cover">
-                        <div>
-                            <p class="font-semibold text-gray-800">David L.</p>
-                            <p class="text-sm text-gray-600">Small Business Owner</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 leading-relaxed">"We use RAPM'S 360 for our commercial laundry needs, and
-                        they always deliver exceptional service. Prompt, professional, and great quality."</p>
+                
+                <div class="absolute left-[50%] -translate-x-1/2 top-[110%] flex gap-8">
+                    <!-- Navigation Buttons -->
+                    <div class="swiper-button-prev !w-12 !h-12 !bg-[#4CAF50] !rounded-full after:!text-xl after:!text-white"><i class="ri-arrow-right-s-line text-white"></i></div>
+                    <div class="swiper-button-next !w-12 !h-12 !bg-[#4CAF50] !rounded-full after:!text-xl after:!text-white"><i class="ri-arrow-left-s-line text-white"></i></div>
+                    
                 </div>
+                
+                <!-- Pagination -->
+                <div class="swiper-pagination !bottom-0"></div>
             </div>
         </div>
     </section>
@@ -1341,8 +1384,8 @@
     <section id="faq" class="py-16 lg:py-24 bg-gradient-to-b from-gray-50 to-white">
         <div class="container mx-auto px-5">
             <div class="text-center mb-12 section-header">
-                <h2 class="text-4xl font-bold mb-4 text-gray-800 section-title">Frequently Asked Questions</h2>
-                <p class="section-description text-gray-600 max-w-2xl mx-auto">Find answers to common questions about our services, pricing, and more.</p>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-description">Find answers to common questions about our services, pricing, and more.</p>
             </div>
 
             <div class="max-w-4xl mx-auto">
@@ -1536,6 +1579,44 @@
 
     <script src="assets/js/global.js"></script>
     <script src="assets/js/script.js"></script>
+    <!-- Add this before closing body tag -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper
+        const testimonialsSwiper = new Swiper('.testimonialsSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+            },
+        });
+    </script>
 </body>
 
+</html>
 </html>
